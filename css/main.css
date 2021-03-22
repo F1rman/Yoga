@@ -213,9 +213,10 @@ transition: all .3s ease;
 }
 #s1 h3{
   font-family: 'FREESCPT';
-font-size: 40px;
+font-size: 41px;
 color: #fff;
 margin-top: 0;
+letter-spacing: 1.2px;
 font-weight: 500;
 }
 #s2{
@@ -232,19 +233,25 @@ font-weight: 500;
   font-weight: 500;
   text-align: center;
   font-family: 'FREESCPT';
-  font-size: 40px;
+  font-size: 41px;
   color: #777;
   margin-top: 0;
   margin-bottom:  75px;
+  letter-spacing: 1.2px;
+
 }
 #s2 .card{
   width: calc(50% - 30px);
   display: flex;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 10%);
   overflow: hidden;
   margin-right: 30px;
   margin-bottom: 25px;
+  max-height: 300px;
+}
+#s2 .card:nth-child(even){
+  margin-right: 0;
 }
 #s2 .card .col:last-child{
   padding: 50px 30px;
@@ -265,7 +272,9 @@ font-weight: 500;
 }
 #s2 .card p{
   font-weight: bold;
-line-height: 22px;
+  line-height: 22px;
+  display: flex;
+  max-height: 150px;
 }
 
 #s3 .item{
@@ -376,6 +385,8 @@ cursor: pointer;
   background: url(../img/bg-02.jpg);
   padding: 125px 0;
   position: relative;
+  background-size: cover;
+  background-position: center;
 }
 #s5::after{
   content: '';
@@ -396,6 +407,7 @@ cursor: pointer;
     flex-flow: column;
     align-items: center;
     padding: 20px;
+    justify-content: flex-start;
 }
 #s5 .item .title{
   font-size: 18px;
@@ -547,7 +559,21 @@ footer .top .ico{
   background-repeat: no-repeat;
   cursor: pointer;
   background-position: center;
+  position: relative;
 
+}
+footer .top .ico::after{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  background: #fff;
+  height: 2px;
+  width: 0;
+  transition: all .3s ease;
+}
+footer .top .ico:hover::after{
+  transition: all .3s ease;
+  width: 30px;
 }
 footer .top .ico.p{
   background-image:  url(../img/pinterest-outlined-logo.png);
@@ -574,4 +600,124 @@ footer .top ul li img{
   width: 30px;
   height: 30px;
   object-fit: none;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .container{
+    max-width: 1000px;
+  }
+  header{
+    padding: 15px;
+  }
+  #s2 .card img{
+    width: 170px;
+  height: 100%;
+  object-fit: cover;
+  }
+  #s4 .col:last-child{
+    margin-right: 25px;
+    width: calc(50% - 30px)
+  }
+  #s4 .slider{
+    height: 250px;
+  }
+  #s4 .slider img{
+    height: 250px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container{
+    max-width: 850px;
+  }
+  #s2 .card .col:last-child{
+    padding: 30px 15px;
+  }
+#s2 .card p{
+  overflow: hidden;
+}
+#s5 .container .row{
+  justify-content: center;
+}
+#s5 .item{
+width: 33%;
+}
+#s6{
+      background-size: cover;
+}
+#s6 .card{
+  margin-right: 15px;
+}
+#s6 .row{
+  justify-content: center;
+  margin-right: 15px;
+}
+footer  .top .col:first-child{
+  padding-right: 20px;
+}
+footer  .top  .col:last-child .row{
+  flex-flow: column;
+}
+footer .top .col:last-child .row .col{
+  width: 100%;
+}
+footer .top ul li{
+width: 100%;
+max-width: 100%
+}
+
+@media screen and (max-width: 768px) {
+  header{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #s1 .col:first-child{
+    display: flex;
+align-items: flex-start;
+padding-right: 0;
+  }
+.container{
+  max-width: 100%;
+width: 100%;
+padding-left: 30px;
+padding-right: 30px;
+}
+#s2 .card{
+  flex-flow: column;
+}
+#s2 .card img{
+  width: 100%;
+}
+#s2 .card{
+  max-height: 100%;
+}
+.row{
+  justify-content: center;
+}
+#s3 .item{
+  width: calc(100% / 2);
+}
+#s2{
+      padding: 50px 0 100px 0;
+}
+#s4{
+      padding: 50px 0;
+}
+#s4 .col:first-child{
+      padding-right: 50px;
+}
+#s5, #s6{
+  padding: 50px 0;
+}
+#s6 .card{
+  margin-right: 30px;
+      width: calc(100% / 2 - 30px);
+      margin-bottom: 30px;
+}
+#s6 .row{
+  margin-right: 0;
+}
+#s6 .card:nth-child(even){
+  margin-right: 0;
+}
 }
