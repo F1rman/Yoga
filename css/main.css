@@ -1,16 +1,15 @@
+@font-face {
+    font-family: 'FREESCPT';
+    src: url('fonts/FREESCPT.woff2') format('woff2'),
+         url('fonts/FREESCPT.woff') format('woff');
+}
+
+
 body,
 html {
   margin: 0;
   padding: 0;
-  background: #fff;
-  margin: 0;
-  padding: 0;
-  width: 276px;
-  height: 422px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-origin: content-box; }
+ }
 
 * {
   -webkit-user-select: none;
@@ -21,3 +20,16 @@ html {
   outline: none; }
 
 /*# sourceMappingURL=main.css.map */
+
+p{
+  font-family: 'Open Sans';
+font-size: 14px;
+letter-spacing: 0.2px;
+color: #555;
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
