@@ -1,35 +1,120 @@
+/* Підключення стилів */
 @font-face {
-    font-family: 'FREESCPT';
-    src: url('fonts/FREESCPT.woff2') format('woff2'),
-         url('fonts/FREESCPT.woff') format('woff');
+  font-family: 'FREESCPT';
+  src: url('fonts/FREESCPT.woff2') format('woff2'),
+    url('fonts/FREESCPT.woff') format('woff');
 }
-
 
 body,
 html {
   margin: 0;
   padding: 0;
- }
+}
 
+/* для всіх елементів */
 * {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: -moz-none;
   -o-user-select: none;
   user-select: none;
-  outline: none; }
-
-/*# sourceMappingURL=main.css.map */
-
-p{
+  outline: none;
+  box-sizing: border-box;
   font-family: 'Open Sans';
-font-size: 14px;
-letter-spacing: 0.2px;
-color: #555;
 }
 
-.container{
+/* для всіх параграфів  */
+p {
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: #555;
+}
+
+/* для всіх  списків  */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+}
+
+a:active, a:hover, a:focus {
+  color: #777;
+}
+
+/* для сітки (невидимий Блок який центрує і обмежує розтягування)  */
+.container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Шапка */
+header {
+  padding: 15px 0;
+  height: 100px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container .logo {
+  object-fit: contain;
+  height: 100%;
+  width: 70px;
+  height: 70px;
+}
+
+header .container .nav {
+  display: flex;
+}
+
+header .container .nav li {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+header .container .nav li a {
+  font-weight: 700;
+  color: #777;
+  transition: all .3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .container .nav li:hover a {
+  color: #5363db;
+  transition: all .3s ease;
+}
+
+header .container .nav li.active a {
+  color: #5363db;
+}
+
+header .container .nav li.active a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  background: red;
+  background: rgb(83, 99, 219);
+  height: 2px;
+  width: 30px;
+}
+
+
+#s1{
+  background-image: url(../img/bg-01.png);
+height: 600px;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
 }
