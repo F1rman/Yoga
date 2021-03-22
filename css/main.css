@@ -1,8 +1,8 @@
 /* Підключення стилів */
 @font-face {
   font-family: 'FREESCPT';
-  src: url('fonts/FREESCPT.woff2') format('woff2'),
-    url('fonts/FREESCPT.woff') format('woff');
+  src: url('../fonts/FREESCPT.woff2') format('woff2'),
+    url('../fonts/FREESCPT.woff') format('woff');
 }
 
 body,
@@ -52,11 +52,29 @@ a:active, a:hover, a:focus {
   max-width: 1200px;
   margin: 0 auto;
 }
+.row{
+  display: flex;
+  flex-flow: row wrap;
+}
+.col{
+  display: flex;
+  flex-flow: column;
+}
+.bg{
+  background-image: url(../img/bg-01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 
 /* Шапка */
 header {
+  z-index: 2;
   padding: 15px 0;
   height: 100px;
+  box-shadow: 0 1px 10px #0000000f;
+  position: relative;
 }
 
 header .container {
@@ -112,9 +130,89 @@ header .container .nav li.active a::after {
 
 
 #s1{
-  background-image: url(../img/bg-01.png);
-height: 600px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#s1 .col{
+  width: 50%;
+}
+#s1 .col:first-child{
+  display: flex;
+  align-items: flex-end;
+  padding-right: 80px;
+}
+#s1 .card{
+  width: 300px;
+display: flex;
+flex-flow: column;
+background: #fff;
+border-radius: 15px;
+box-shadow: 8px 8px 10px rgba(0,0,0, 0.15);
+height: 386px;
+overflow: hidden;
+padding: 30px;
+}
+#s1 .card .title{
+  font-size: 26px;
+  color: #5363db;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+#s1 .card input, #s1 .card select{
+  background: #f2f2f2;
+border: none;
+height: 50px;
+border-radius: 10px;
+font-size: 14px;
+width: 100%;
+margin-bottom: 20px;
+padding: 10px;
+font-weight: 500;
+}
+#s1 .card input::placeholder, #s1 .card select::placeholder{
+color: #888;
+}
+#s1 .card select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    position: relative;
+}
+#s1 .card select{
+  background-image: url(../img/arr.png);
 background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+background-position: calc(100% - 10px);
+cursor: pointer;
+
+}
+
+#s1 .card input[type=submit]{
+  width: 170px;
+margin-left: 70px;
+background: #5363db;
+color: #fff;
+font-weight: bold;
+cursor: pointer;
+transition: all .3s ease;
+}
+
+#s1 .card input[type=submit]:hover{
+  box-shadow: 1px 1px 10px rgba(0,0,0, 0.15);
+}
+#s1 h1{
+  font-weight: bold;
+  font-size: 48px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+#s1 h3{
+  font-family: 'FREESCPT';
+font-size: 40px;
+color: #fff;
+margin-top: 0;
+font-weight: 500;
 }
