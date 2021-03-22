@@ -437,6 +437,7 @@ align-items: center;
 justify-content: center;
 font-weight: bold;
 font-size: 67px;
+flex:none;
 color: #fff;
 }
 
@@ -485,11 +486,78 @@ font-weight: bold;
 cursor: pointer;
 transition: all .3s ease;
 height: 50px;
-border-radius: 30px;
+border-radius: 20px;
 display: flex;
 align-items: center;
 justify-content: center;
 }
 #s6 .card .content .btn:hover{
 box-shadow: 1px 1px 10px rgb(0 0 0 / 15%);
+}
+
+footer .bottom{
+  display: flex;
+justify-content: center;
+align-items: center;
+height: 100px;
+background: #5363d8;
+color: #b7bffc;
+font-size: 16px;
+}
+footer .top{
+  padding: 100px 0;
+background: #5b6ceb;
+}
+footer .top .col{
+width: 50%;
+}
+footer .top  h2{
+  font-size: 18px;
+text-transform: uppercase;
+color: white;
+}
+footer .top p{
+color: white;
+font-weight: 400;
+max-width: 450px;
+}
+footer .top .social{
+  display: flex;
+  margin-top: 50px;
+}
+footer .top .ico{
+  margin-right: 10px;
+  background-image:  url(../img/facebook-logo-outline.png);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: center;
+
+}
+footer .top .ico.p{
+  background-image:  url(../img/pinterest-outlined-logo.png);
+}
+footer .top .ico.t{
+  background-image:  url(../img/twitter-social-outlined-logo.png);
+}
+footer .top .ico.g{
+  background-image:  url(../img/google-plus-outlined-logo-social-symbol.png);
+}
+footer .top .ico.i{
+  background-image:  url(../img/instagram-social-outlined-logo.png);
+}
+footer .top ul li{
+  margin-bottom: 25px;
+  display: flex;
+  max-width: 225px;
+}
+footer .top ul li a{
+  color: white;
+}
+footer .top ul li img{
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  object-fit: none;
 }
