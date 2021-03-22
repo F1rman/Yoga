@@ -373,8 +373,22 @@ cursor: pointer;
   transform: rotate(180deg);
 }
 #s5{
-  background: #5b6ceb;
+  background: url(../img/bg-02.jpg);
   padding: 125px 0;
+  position: relative;
+}
+#s5::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #5c6cebcc;
+}
+#s5 .container{
+  z-index: 2;
+  position: relative;
 }
 #s5 .item{
     width: 25%;
