@@ -13,11 +13,7 @@ html {
 
 /* для всіх елементів */
 * {
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: -moz-none;
-  -o-user-select: none;
-  user-select: none;
+
   outline: none;
   box-sizing: border-box;
   font-family: 'Open Sans';
@@ -46,6 +42,18 @@ a {
 
 a:active, a:hover, a:focus {
   color: #777;
+}
+#registr{
+  display: block;
+    border-radius: 100px;
+    background: #ff0;
+    padding: 15px;
+    text-align: center;
+    color: #000;
+    width: 141px;
+}
+registr:hover{
+  background: red;
 }
 
 /* для сітки (невидимий Блок який центрує і обмежує розтягування)  */
@@ -131,6 +139,9 @@ header .container .nav li.active a::after {
   height: 2px;
   width: 30px;
 }
+header .container .nav li:last-child.active a::after {
+display: none;
+}
 
 #s1 {
   height: 600px;
@@ -169,7 +180,7 @@ header .container .nav li.active a::after {
   font-weight: 500;
 }
 
-#s1 .card input, #s1 .card select {
+#s1 .card input, #s1 .card select, #popap_reg input {
   background: #f2f2f2;
   border: none;
   height: 50px;
@@ -201,17 +212,22 @@ header .container .nav li.active a::after {
   cursor: pointer;
 }
 
-#s1 .card input[type=submit] {
+#s1 .card .btn_send,.btn_reg  {
   width: 170px;
-  margin-left: 70px;
-  background: #5363db;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all .3s ease;
+margin-left: 30px;
+background: #5363db;
+color: #fff;
+font-weight: bold;
+cursor: pointer;
+transition: all .3s ease;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 10px;
 }
 
-#s1 .card input[type=submit]:hover {
+#s1 .card .btn_send:hover {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -271,7 +287,8 @@ header .container .nav li.active a::after {
 }
 
 #s2 .card .col:last-child {
-  padding: 50px 30px;
+  padding: 30px 30px;
+  position: relative;
 }
 
 #s2 .card .title {
@@ -288,6 +305,8 @@ header .container .nav li.active a::after {
 
 #s2 .card span {
   color: #999;
+  bottom: 30px;
+  position: absolute;
   font-weight: 500;
 }
 
@@ -295,6 +314,8 @@ header .container .nav li.active a::after {
   font-weight: bold;
   line-height: 22px;
   display: flex;
+    line-height: 120%;
+
   max-height: 150px;
 }
 
@@ -318,6 +339,9 @@ header .container .nav li.active a::after {
 #s3 .item:hover::before, #s3 .item:hover::after {
   opacity: 1;
   transition: opacity .3s ease;
+}
+.col .title{
+  margin-top: 12px;
 }
 
 #s3 .item:hover::after {
@@ -360,6 +384,9 @@ header .container .nav li.active a::after {
   font-size: 30px;
   text-transform: uppercase;
   color: #5b6ceb;
+}
+#s4 h3{
+  margin-top: 3px;
 }
 
 #s4 p {
@@ -658,7 +685,62 @@ footer .top ul li img {
   height: 30px;
   object-fit: none;
 }
+#masters{
+  padding: 100px 40px;
+}
+#f{
+  background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 2;
+}
+#f.active{
+  display: flex;
 
+}
+#popap_reg,
+#popap{
+  display: none;
+  position: fixed;
+  background: #fff;
+  border-radius: 20px;
+  z-index: 2;
+  left: calc(50% - 150px);
+  top: calc(50% - 200px);
+  width: 300px;
+flex-flow: column;
+background: #fff;
+border-radius: 15px;
+box-shadow: 8px 8px 10px rgb(0 0 0 / 15%);
+/* height: 400px; */
+overflow: hidden;
+padding: 30px;
+}
+#popap.active, #popap_reg.active{
+  display: flex;
+
+}
+#popap .close,#popap_reg .close{
+  font-size: 20px;
+  color: #222;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+#popap h1{
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #5363db;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+  margin: 30px 0 0 0;
+}
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 1000px;
